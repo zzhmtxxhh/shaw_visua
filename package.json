@@ -1,10 +1,19 @@
 {
   "name": "visulizer_app",
+  "proxy": "https://api.uwaterloo.ca/v2/wireless/usage.json?key=8dec25674e8325c71c1be798bcb5df82",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.0.0-beta.2",
+    "@material-ui/icons": "^4.0.0-beta.0",
+    "@material-ui/styles": "^3.0.0-alpha.10",
+    "c3": "^0.7.0",
+    "lodash": "^4.17.11",
+    "muze": "^1.2.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-grid-layout": "^0.16.6",
+    "react-rnd": "^9.1.2",
     "react-scripts": "3.0.1"
   },
   "scripts": {
@@ -28,4 +37,5 @@
       "last 1 safari version"
     ]
   }
+
 }

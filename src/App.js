@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
+// import Drawer_Bar from './Components/Header'
+import {Suspense} from 'react'
 import './App.css';
+import { Responsive, WidthProvider } from "react-grid-layout";
+const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const Drawer_Bar = React.lazy(()=> import('./Components/Header'))
+
+
+const style = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  border: "solid 1px #ddd",
+  background: "#f0f0f0"
+};
+
+
+export default class App extends  React.Component{
+
+  constructor(props){
+    super(props)
+
+
+  }
+
+
+
+  render(){
+    return (
+    <div >
+      <Suspense fallback={<h1>Loading....</h1>}>
+        <Drawer_Bar />
+      </Suspense>
     </div>
   );
+  }
 }
 
-export default App;
+
